@@ -1,0 +1,49 @@
+{
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "amd": true,
+    "es6": true
+  },
+  "rules": {
+    "consistent-return": 2,
+    "curly": [1,"all"],
+    "default-case": 2,
+    "dot-notation": [2,{"allowKeywords":true}],
+    "dot-location": 2,
+    "eqeqeq": 1,
+    "guard-for-in": 1,
+    "no-else-return": 1,
+    "no-labels": 2,
+    "no-eq-null": 2,
+    "no-eval": 2,
+    "no-floating-decimal": 2,
+    "no-loop-func": 1,
+    "no-multi-spaces": 1,
+    "no-native-reassign": 2,
+    "no-new-wrappers": 1,
+    "no-new": 1,
+    "no-return-assign": 1,
+    "no-useless-call": 1,
+    "no-void": 2,
+    "strict": 1,
+    "no-undef-init": 2,
+    "brace-style": [1,"1tbs",{}],
+    "camelcase": [1,{"properties":"always"}],
+    "comma-style": 1,
+    "consistent-this": [1,"self"],
+    "indent": [1,2],
+    "no-array-constructor": 1,
+    "no-nested-ternary": 2,
+    "no-trailing-spaces": [1,{"skipBlankLines":false}],
+    "no-unneeded-ternary": 1,
+    "quotes": [1,"single","avoid-escape"],
+    "semi": [1,"always"],
+    "no-var": 2,
+    "no-console": 0
+  }
+}
