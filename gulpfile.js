@@ -8,7 +8,6 @@ const Server = require('karma').Server;
 const livereload = require('gulp-livereload');
 const st = require('st');
 const http = require('http');
-const fs = require('fs');
 
 gulp.task('babel:debug', () => {
   return gulp.src('src/**/*.js').
