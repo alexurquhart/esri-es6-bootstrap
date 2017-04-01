@@ -9,15 +9,15 @@
     }
   }
 
-  const API_LOCATION = 'http://js.arcgis.com/3.19/';
+  const API_LOCATION = 'http://js.arcgis.com/4.3/';
 
 
   window.dojoConfig = {
     packages: [
       // local pacakges to test
       {
-        name: 'local',
-        location: '/base/dist/'
+        name: 'app',
+        location: '/base/dist/js'
       },
 
       // esri/dojo packages
