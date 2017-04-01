@@ -5,3 +5,7 @@ mapNode.id = 'map';
 document.getElementById('app').appendChild(mapNode);
 
 const mc = new MapController(mapNode);
+
+document.getElementById('changeBasemap').addEventListener('click', () => {
+  mc.changeBasemap('osm');
+});

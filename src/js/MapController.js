@@ -1,11 +1,7 @@
-import declare from 'dojo/_base/declare';
 import Map from 'esri/Map';
 import MapView from 'esri/views/MapView';
 
-export default declare([], {
-  _map: null,
-  _mapView: null,
-
+class MapController {
   constructor(node) {
     this._map = new Map({
       basemap: 'streets'
@@ -16,4 +12,10 @@ export default declare([], {
       map: this._map
     });
   }
-});
+
+  changeBasemap(newMap) {
+    this._map.basemap = newMap;
+  }
+}
+
+export default MapController;

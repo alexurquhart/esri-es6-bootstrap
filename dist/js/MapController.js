@@ -1,9 +1,32 @@
-define(['dojo/_base/declare', 'esri/Map', 'esri/views/MapView'], function (declare, Map, MapView) {
-  return declare([], {
-    _map: null,
-    _mapView: null,
+define(['esri/Map', 'esri/views/MapView'], function (Map, MapView) {
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
 
-    constructor: function constructor(node) {
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  var MapController = function () {
+    function MapController(node) {
+      _classCallCheck(this, MapController);
+
       this._map = new Map({
         basemap: 'streets'
       });
@@ -13,6 +36,17 @@ define(['dojo/_base/declare', 'esri/Map', 'esri/views/MapView'], function (decla
         map: this._map
       });
     }
-  });
+
+    _createClass(MapController, [{
+      key: 'changeBasemap',
+      value: function changeBasemap(newMap) {
+        this._map.basemap = newMap;
+      }
+    }]);
+
+    return MapController;
+  }();
+
+  return MapController;
 });
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImpzL01hcENvbnRyb2xsZXIuanMiXSwibmFtZXMiOlsiZGVjbGFyZSIsIk1hcCIsIk1hcFZpZXciLCJfbWFwIiwiX21hcFZpZXciLCJjb25zdHJ1Y3RvciIsIm5vZGUiLCJiYXNlbWFwIiwiY29udGFpbmVyIiwibWFwIl0sIm1hcHBpbmdzIjoiUUFBb0Isb0IsRUFDSixVLEVBQ0ksb0IsYUFGYkEsTyxFQUNBQyxHLEVBQ0FDLE87U0FFUUYsUUFBUSxFQUFSLEVBQVk7QUFDekJHLFVBQU0sSUFEbUI7QUFFekJDLGNBQVUsSUFGZTs7QUFJekJDLGVBSnlCLHVCQUliQyxJQUphLEVBSVA7QUFDaEIsV0FBS0gsSUFBTCxHQUFZLElBQUlGLEdBQUosQ0FBUTtBQUNsQk0saUJBQVM7QUFEUyxPQUFSLENBQVo7O0FBSUEsV0FBS0gsUUFBTCxHQUFnQixJQUFJRixPQUFKLENBQVk7QUFDMUJNLG1CQUFXRixJQURlO0FBRTFCRyxhQUFLLEtBQUtOO0FBRmdCLE9BQVosQ0FBaEI7QUFJRDtBQWJ3QixHQUFaLEMiLCJmaWxlIjoianMvTWFwQ29udHJvbGxlci5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBkZWNsYXJlIGZyb20gJ2Rvam8vX2Jhc2UvZGVjbGFyZSc7XG5pbXBvcnQgTWFwIGZyb20gJ2VzcmkvTWFwJztcbmltcG9ydCBNYXBWaWV3IGZyb20gJ2Vzcmkvdmlld3MvTWFwVmlldyc7XG5cbmV4cG9ydCBkZWZhdWx0IGRlY2xhcmUoW10sIHtcbiAgX21hcDogbnVsbCxcbiAgX21hcFZpZXc6IG51bGwsXG5cbiAgY29uc3RydWN0b3Iobm9kZSkge1xuICAgIHRoaXMuX21hcCA9IG5ldyBNYXAoe1xuICAgICAgYmFzZW1hcDogJ3N0cmVldHMnXG4gICAgfSk7XG5cbiAgICB0aGlzLl9tYXBWaWV3ID0gbmV3IE1hcFZpZXcoe1xuICAgICAgY29udGFpbmVyOiBub2RlLFxuICAgICAgbWFwOiB0aGlzLl9tYXBcbiAgICB9KTtcbiAgfVxufSk7Il19
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImpzL01hcENvbnRyb2xsZXIuanMiXSwibmFtZXMiOlsiTWFwIiwiTWFwVmlldyIsIk1hcENvbnRyb2xsZXIiLCJub2RlIiwiX21hcCIsImJhc2VtYXAiLCJfbWFwVmlldyIsImNvbnRhaW5lciIsIm1hcCIsIm5ld01hcCJdLCJtYXBwaW5ncyI6IlFBQWdCLFUsRUFDSSxvQixhQURiQSxHLEVBQ0FDLE87Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7TUFFREMsYTtBQUNKLDJCQUFZQyxJQUFaLEVBQWtCO0FBQUE7O0FBQ2hCLFdBQUtDLElBQUwsR0FBWSxJQUFJSixHQUFKLENBQVE7QUFDbEJLLGlCQUFTO0FBRFMsT0FBUixDQUFaOztBQUlBLFdBQUtDLFFBQUwsR0FBZ0IsSUFBSUwsT0FBSixDQUFZO0FBQzFCTSxtQkFBV0osSUFEZTtBQUUxQkssYUFBSyxLQUFLSjtBQUZnQixPQUFaLENBQWhCO0FBSUQ7Ozs7b0NBRWFLLE0sRUFBUTtBQUNwQixhQUFLTCxJQUFMLENBQVVDLE9BQVYsR0FBb0JJLE1BQXBCO0FBQ0Q7Ozs7OztTQUdZUCxhIiwiZmlsZSI6ImpzL01hcENvbnRyb2xsZXIuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgTWFwIGZyb20gJ2VzcmkvTWFwJztcbmltcG9ydCBNYXBWaWV3IGZyb20gJ2Vzcmkvdmlld3MvTWFwVmlldyc7XG5cbmNsYXNzIE1hcENvbnRyb2xsZXIge1xuICBjb25zdHJ1Y3Rvcihub2RlKSB7XG4gICAgdGhpcy5fbWFwID0gbmV3IE1hcCh7XG4gICAgICBiYXNlbWFwOiAnc3RyZWV0cydcbiAgICB9KTtcblxuICAgIHRoaXMuX21hcFZpZXcgPSBuZXcgTWFwVmlldyh7XG4gICAgICBjb250YWluZXI6IG5vZGUsXG4gICAgICBtYXA6IHRoaXMuX21hcFxuICAgIH0pO1xuICB9XG5cbiAgY2hhbmdlQmFzZW1hcChuZXdNYXApIHtcbiAgICB0aGlzLl9tYXAuYmFzZW1hcCA9IG5ld01hcDtcbiAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBNYXBDb250cm9sbGVyOyJdfQ==
